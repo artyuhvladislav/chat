@@ -1,9 +1,16 @@
 import React from 'react'
-import './App.css';
+
+import JoinBlock from './components/JoinBlock';
+
+import './index.css';
+
 
 const App = () => {
+
   return (
-   <div></div>
+   <div className="wrapper">
+     <JoinBlock/>
+   </div>
   )
 }
 
