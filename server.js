@@ -1,5 +1,5 @@
 const express = require("express");
-
+const path = require('path');
 const app = express();
 
 const server = require("http").Server(app);
@@ -8,7 +8,7 @@ const port = process.env.PORT || 8888;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static(path.join(__dirname, '../../build')));
 const rooms = new Map();
 
 app.get("/rooms/:id", (req, res) => {
